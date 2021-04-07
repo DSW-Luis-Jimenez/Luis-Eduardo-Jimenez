@@ -54,7 +54,7 @@ body {
 
 .container .footer {
     grid-column: 1/6;
-    background-color: ghostwhite;
+    background-color: rgb(247, 242, 242);
     color: black;
     font-size: 1.3em;
 }
@@ -75,7 +75,7 @@ body {
 
 
 .content>.article {
-    background-color: azure;
+    background-color: rgb(247, 242, 242);
     padding: 20px;
     margin-top: 5px;
     color: midnightblue;
@@ -86,7 +86,7 @@ body {
     grid-column: 1/6;
     background-color: rgba(0, 0, 0, 0.897);
     color: white;
-    height: 180px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,7 +104,7 @@ body {
 
 .container>.sidebar {
     grid-column: span 3;
-    background-color: rgba(0, 0, 0, 0.897);
+    background-color: rgb(247, 242, 242);
     color: white;
     display: flex;
     flex-direction: column;
@@ -152,6 +152,8 @@ body {
 .container .menu li a:hover {
     background-color: coral;
 }
+
+
 
 /*Ahora voy a organizar un poco para que el sitio sea algo de  responsive*/
 
