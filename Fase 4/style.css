@@ -1,0 +1,182 @@
+* {
+    /*En esta parte se qui todos los estilos*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*Aqui empiezo a estilizar el body */
+    font-family: Georgia, 'Times New Roman', Times, serif
+        /*Aqui se define el tipo de letra*/
+        background-color: ghostwhite;
+}
+
+/*Header*/
+.title h1 {
+    padding: 20px 0;
+    text-align: center;
+    /*Aqui centro el titulo*/
+    font-size: 2.5em;
+    /*Tamaño de fuente*/
+    text-transform: uppercase;
+}
+
+.container {
+    background-color: rgba(255,
+            255,
+            255,
+            0.932);
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+
+    display: grid;
+    gap: 1.6em;
+    /*Aqui añado espaciado entre todos los contenedores*/
+    grid-template-columns: repeat(5, 1fr);
+    /*Aqui creo las columnas*/
+}
+
+.container>.title,
+.container>.content,
+.container>.menu,
+.container>.sidebar,
+.container>.related-post,
+.container>.footer,
+.container>.div {}
+
+/*Aqui empiezo a organizar las columnas */
+.container .title {
+    grid-column: 1/6;
+    background-color: black;
+    color: white;
+}
+
+
+    .container .footer {
+        grid-column: 1/6;
+        background-color: rgb(247, 242, 242);
+        color: black;
+        font-size: 1.3em;
+    }
+
+    .container .menu {
+        grid-column: 1/6;
+        background-color: black;
+    }
+
+    .container>.content {
+        grid-column: span 2;
+    }
+
+    .content .article h2,
+    .content .article p {
+        padding: 10px;
+    }
+
+
+    .content>.article {
+        background-color: rgb(247, 242, 242);
+        padding: 20px;
+        margin-top: 5px;
+        color: midnightblue;
+
+    }
+
+    .container>.related-post {
+        grid-column: 1/6;
+        background-color: rgba(0, 0, 0, 0.897);
+        color: white;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+    }
+
+    .container>.related-post:hover {
+        cursor: pointer;
+        color: black;
+        background-color: coral;
+
+    }
+
+
+
+    .container>.sidebar {
+        grid-column: span 3;
+        background-color: rgb(247, 242, 242);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+
+    }
+
+    .container .sidebar img {
+        width: 100%;
+        margin-top: spx;
+    }
+
+
+
+    .content .menu {
+        list-style: none;
+        padding: 0;
+        background-color: black;
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .container .menu a {
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 400;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s ease all;
+        font-size: 1em;
+    }
+
+    .container .menu li {
+        display: inline-block;
+        /*Esto es para ponerlo a lo largo*/
+        text-align: center;
+    }
+
+    .container .menu li a:hover {
+        background-color: coral;
+    }
+
+
+
+    /*Ahora voy a organizar un poco para que el sitio sea algo de  responsive*/
+
+    @media screen and (max-width: 768px) {
+        .title {
+            text-align: center;
+        }
+
+        .container .content {
+
+            grid-column: 1/-1;
+        }
+
+        .container .sidebar {
+            grid-column: 1/-1;
+        }
+
+        .container .menu {
+            grid-column: 1/-1;
+        }
+
+        .container .related-post {
+            grid-column: 1/-1;
+        }
+    }
