@@ -1,0 +1,47 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+ 
+}
+
+#menu li > a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+
+#menu form > button {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*--=================================================================================--*/
+/*SLIDER DE IMAGENES*/
+/*--=================================================================================--*/
+.carousel-inner {
+  max-height: 20rem;
+}
+#iconos i{
+    font-size: 26px;
+    padding: 0 8px;
+    color: #3f3f3f;
+}
+footer {
+    background-color: 1b2a4e;
+    min-height: 100px;
+}
+footer p {
+    color: #3f3f3f;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    #intro{
+        width: 90% !important;
+    }
+    .servicio-fila{
+        width: 100% !important;
+        text-align: center;
+    }
+
+}

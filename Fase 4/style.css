@@ -9,6 +9,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif
         /*Aqui se define el tipo de letra*/
         background-color: ghostwhite;
+    overflow: hidden;
 }
 
 /*Header*/
@@ -53,130 +54,166 @@ body {
 }
 
 
-    .container .footer {
-        grid-column: 1/6;
-        background-color: rgb(247, 242, 242);
-        color: black;
-        font-size: 1.3em;
+.container .footer {
+    grid-column: 1/6;
+    background-color: rgb(247, 242, 242);
+    color: black;
+    font-size: 1.3em;
+}
+
+.container .menu {
+    grid-column: 1/6;
+    background-color: black;
+}
+
+.container>.content {
+    grid-column: span 2;
+}
+
+.content .article h2,
+.content .article p {
+    padding: 10px;
+}
+
+
+.content>.article {
+    background-color: rgb(247, 242, 242);
+    padding: 20px;
+    margin-top: 5px;
+    color: midnightblue;
+
+}
+
+.container>.related-post {
+    grid-column: 1/6;
+    background-color: rgba(0, 0, 0, 0.897);
+    color: white;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.container>.related-post:hover {
+    cursor: pointer;
+    color: black;
+    background-color: coral;
+
+}
+
+
+
+.container>.sidebar {
+    grid-column: span 3;
+    background-color: rgb(247, 242, 242);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+
+}
+
+.container .sidebar img {
+    width: 100%;
+    margin-top: spx;
+}
+
+
+
+.content .menu {
+    list-style: none;
+    padding: 0;
+    background-color: black;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.container .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease all;
+    font-size: 1em;
+}
+
+.container .menu li {
+    display: inline-block;
+    /*Esto es para ponerlo a lo largo*/
+    text-align: center;
+}
+
+.container .menu li a:hover {
+    background-color: coral;
+}
+
+/*MEnu del nav del bootstrap*/
+#menu li>a {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+#menu form>button {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*Imagenes del bootstrap*/
+carousel-inner {
+    max-height: 39rem;
+
+}
+
+/*footer*/
+footer{
+    background: rgba(0, 0, 15, 0.644) ;
+    min-height: 100px;
+}
+footer p{
+    color: #f3f3f3;
+    text-align: center;
+}
+#iconos i{
+    font-size: 26px;
+    padding: 0 8px;
+}
+
+
+
+/*Ahora voy a organizar un poco para que el sitio sea algo de  responsive*/
+
+@media screen and (max-width: 768px) {
+    .title {
+        text-align: center;
+    }
+
+    .container .content {
+
+        grid-column: 1/-1;
+    }
+
+    .container .sidebar {
+        grid-column: 1/-1;
     }
 
     .container .menu {
-        grid-column: 1/6;
-        background-color: black;
+        grid-column: 1/-1;
     }
 
-    .container>.content {
-        grid-column: span 2;
+    .container .related-post {
+        grid-column: 1/-1;
     }
 
-    .content .article h2,
-    .content .article p {
-        padding: 10px;
+    #intro {
+        width: 90% !important;
     }
-
-
-    .content>.article {
-        background-color: rgb(247, 242, 242);
-        padding: 20px;
-        margin-top: 5px;
-        color: midnightblue;
-
-    }
-
-    .container>.related-post {
-        grid-column: 1/6;
-        background-color: rgba(0, 0, 0, 0.897);
-        color: white;
-        height: 350px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.5s ease;
-    }
-
-    .container>.related-post:hover {
-        cursor: pointer;
-        color: black;
-        background-color: coral;
-
-    }
-
-
-
-    .container>.sidebar {
-        grid-column: span 3;
-        background-color: rgb(247, 242, 242);
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.5s ease;
-
-    }
-
-    .container .sidebar img {
-        width: 100%;
-        margin-top: spx;
-    }
-
-
-
-    .content .menu {
-        list-style: none;
-        padding: 0;
-        background-color: black;
-        width: 90%;
-        max-width: 1000px;
-        margin: auto;
-    }
-
-    .container .menu a {
-        text-decoration: none;
-        color: white;
-        padding: 20px;
-        display: block;
-        text-transform: uppercase;
-        font-weight: 400;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s ease all;
-        font-size: 1em;
-    }
-
-    .container .menu li {
-        display: inline-block;
-        /*Esto es para ponerlo a lo largo*/
-        text-align: center;
-    }
-
-    .container .menu li a:hover {
-        background-color: coral;
-    }
-
-
-
-    /*Ahora voy a organizar un poco para que el sitio sea algo de  responsive*/
-
-    @media screen and (max-width: 768px) {
-        .title {
-            text-align: center;
-        }
-
-        .container .content {
-
-            grid-column: 1/-1;
-        }
-
-        .container .sidebar {
-            grid-column: 1/-1;
-        }
-
-        .container .menu {
-            grid-column: 1/-1;
-        }
-
-        .container .related-post {
-            grid-column: 1/-1;
-        }
-    }
+}
