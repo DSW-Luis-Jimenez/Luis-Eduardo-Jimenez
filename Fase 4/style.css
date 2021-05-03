@@ -9,7 +9,6 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif
         /*Aqui se define el tipo de letra*/
         background-color: ghostwhite;
-    overflow: hidden;
 }
 
 /*Header*/
@@ -52,7 +51,6 @@ body {
     background-color: black;
     color: white;
 }
-
 
 .container .footer {
     grid-column: 1/6;
@@ -155,38 +153,6 @@ body {
     background-color: coral;
 }
 
-/*MEnu del nav del bootstrap*/
-#menu li>a {
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-}
-
-#menu form>button {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/*Imagenes del bootstrap*/
-carousel-inner {
-    max-height: 39rem;
-
-}
-
-/*footer*/
-footer{
-    background: rgba(0, 0, 15, 0.644) ;
-    min-height: 100px;
-}
-footer p{
-    color: #f3f3f3;
-    text-align: center;
-}
-#iconos i{
-    font-size: 26px;
-    padding: 0 8px;
-}
-
 
 
 /*Ahora voy a organizar un poco para que el sitio sea algo de  responsive*/
@@ -211,9 +177,5 @@ footer p{
 
     .container .related-post {
         grid-column: 1/-1;
-    }
-
-    #intro {
-        width: 90% !important;
     }
 }
